@@ -3,7 +3,7 @@ f = open('new.qif')
 
 contents = []
 for my_line in f:
-    if ( my_line[0]!= '!'):
+    if my_line[0] != '!':
         contents.append(my_line.strip('\n'))
 
 
@@ -13,12 +13,12 @@ for r in contents:
         print(record)
         record = "" 
     else:
-        if ( r != "" ):
+        if r != "":
             sep = ','
-            if ( record == "" ):
+            if record == "":
                 sep=''
             text = sep + r[1:]
-            record+=text 
+            record += text 
 
 
 
